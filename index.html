@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Google Formulir</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- //////////////ffffffff -->
+      <div class="blur" id="buka">
+        <div class="results">
+          <div class="title">
+            <img style="width: 90px" " src="image/logo.png"
+            alt="logo-perusahaan" />
+            <h1 style="margin-top: 15px">WORKSHOP UI / UX</h1>
+          </div>
+
+          <div class="result">
+            <div class="hasil-identitas">
+              <div class="identitas-foto">
+                <div class="foto">
+                  <img
+                    src="image/Screenshot_2021-09-22-14-33-47-07.jpg"
+                    alt="" />
+                </div>
+                <br />
+                <p id="result-name"></p>
+              </div>
+              <div class="identitas-data">
+                <div class="identitas nama">
+                  <label for="nama">Nama Lengkap</label>
+                  <p name="nama">: <span id="namaDisplay"></span></p>
+                </div>
+                <div class="identitas date-lahir">
+                  <label for="lahir">Tanggal Lahir</label>
+                  <p name="lahir" id="lahir">
+                    : <span id="lahirDisplay"></span>
+                  </p>
+                </div>
+                <div class="identitas email-aktif">
+                  <label for="email">Email Aktif</label>
+                  <p name="email">: <span id="emailDisplay"></span></p>
+                </div>
+                <div class="identitas nomor-aktif">
+                  <label for="nomor">Institut</label>
+                  <p name="nomor">: <span id="institutDisplay"></span></p>
+                </div>
+                <div class="identitas nomor-aktif">
+                  <label for="nomor">Kode</label>
+                  <p name="nomor">
+                    : <span id="kodeDisplay"></span>
+                    <span
+                      style="
+                        display: block;
+                        font-weight: bold;
+                        margin-left: 2px;
+                      "
+                      ><em>
+                        *(Copy kode dan paste di tahap Selanjutnya)</em
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="kata-kata">
+              <p>
+                Selamat atas keikutsertaan Anda dalam workshop ini. Acara ini
+                dirancang untuk memberikan pemahaman mendalam tentang topik yang
+                relevan dengan dunia kerja. Semoga Anda dapat mengambil manfaat
+                maksimal dan menerapkan wawasan baru dalam karier Anda. Mari
+                berinteraksi, bertukar ide, dan belajar bersama sebagai satu tim
+                yang solid dan bersatu.
+              </p>
+              <p style="margin-top: 1rem">
+                <strong>Ir. Dr. Dinar Muhammad Akbar</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form">
+        <div class="title-text">
+          <h1>Daftar Hadir Event</h1>
+          <p class="title-text-keterangan">Contoh form daftar hadir</p>
+          <hr />
+          <p class="required">*Required</p>
+          <span id="email-mu"></span>
+        </div>
+        <div class="input nama">
+          <label for="name">Nama</label>
+          <input
+            id="namaInput"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            autofocus
+            minlength="3"
+            maxlength="30"
+            oninvalid="this.setCustomValidity('Nama lengkap harus diisi !')"
+            oninput="this.setCustomValidity('')" />
+        </div>
+        <div class="input date">
+          <label for="date">Tanggal Lahir Mu</label>
+          <input
+            id="dateInput"
+            type="date"
+            name="date"
+            required
+            oninvalid="this.setCustomValidity('Tanggal Lahir harus diisi !')"
+            oninput="this.setCustomValidity('')" />
+        </div>
+        <div class="input email">
+          <label for="email">Email</label>
+          <input
+            id="emailInput"
+            type="email"
+            name="email"
+            placeholder="Your email"
+            required
+            oninvalid="this.setCustomValidity('Email harus diisi !')"
+            oninput="this.setCustomValidity('')" />
+        </div>
+        <div class="input password">
+          <label for="password">Password</label>
+          <input
+            id="passwordInput"
+            type="password"
+            name="password"
+            minlength="8"
+            placeholder="Your password"
+            required
+            oninvalid="this.setCustomValidity('Password harus diisi !')"
+            oninput="this.setCustomValidity('')" />
+        </div>
+        <div class="input options-universitas">
+          <label for="institusi">Institut</label>
+          <select
+            id="institutInput"
+            name="institusi"
+            id="institusi"
+            required
+            oninvalid="this.setCustomValidity('Pilihan Institut harus diisi !')"
+            oninput="this.setCustomValidity('')">
+            <option value="Pilih Kampus" hidden>Pilih Kampus</option>
+            <option value="Institut Teknologi Bandung">
+              Institut Teknologi Bandung
+            </option>
+            <option value="Universitas Indonesia">Universitas Indonesia</option>
+            <option value="Universitas Gadjah Mada">
+              Universitas Gadjah Mada
+            </option>
+          </select>
+        </div>
+        <div class="input upload">
+          <label for="file">Foto Format 3x4 cm</label>
+          <input
+            type="file"
+            id="gambar"
+            name="file"
+            style="width: 100%"
+            required
+            oninvalid="this.setCustomValidity('Foto harus di Upload !')"
+            oninput="this.setCustomValidity(' ')" />
+        </div>
+        <div class="input keterangan">
+          <label for="keterangan">Hadir sebagai ....</label>
+          <div class="options" id="optionsInput">
+            <lebel id="option" style="display: flex">
+              <input type="checkbox" id="checkbox" style="margin-right: 10px" />
+              Leader
+            </lebel>
+            <lebel id="option" style="display: flex">
+              <input type="checkbox" id="checkbox" style="margin-right: 10px" />
+              CEO
+            </lebel>
+            <lebel id="option" style="display: flex">
+              <input type="checkbox" id="checkbox" style="margin-right: 10px" />
+              Asisten Leader
+            </lebel>
+          </div>
+        </div>
+        <div class="submit-clear-from">
+          <button type="submit" onclick="submitClear()">Submit</button>
+          <button class="btn-clear" onclick="clearForm()">Clear Form</button>
+        </div>
+        <p>Never Submit passwords thought Google Forms.</p>
+      </div>
+
+      <!-- </form> -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
