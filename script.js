@@ -75,23 +75,6 @@ function getImgValue() {
   return null; // Return null if no valid image is selected
 }
 
-// // buat kode random // generate random code
-// function generateRandomStringWithNumbers(length) {
-//   if (length <= 0) {
-//     throw new Error("Panjang harus lebih besar dari nol.");
-//   }
-
-//   let randomString = "";
-//   const characters =
-//     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-//   for (let i = 0; i < length; i++) {
-//     const randomIndex = Math.floor(Math.random() * characters.length);
-//     randomString += characters[randomIndex];
-//   }
-//   return randomString;
-// }
-
 function generateRandomStringWithNumbers(length) {
   if (length <= 0) {
     throw new Error("Ada kesalahan !");
