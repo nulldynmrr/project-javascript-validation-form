@@ -35,7 +35,6 @@ institutInput.addEventListener("keyup", (event) => {
   }
 });
 
-// clear form
 function clearForm() {
   document.getElementById("namaInput").value = "";
   document.getElementById("dateInput").value = "";
@@ -44,7 +43,6 @@ function clearForm() {
   document.getElementById("institutInput").value = "Pilih Kampus";
   document.getElementById("gambar").value = "";
 
-  // Clear checkboxes
   const checkboxes = document.querySelectorAll(
     ".input.keterangan .option input[type='checkbox']"
   );
@@ -56,15 +54,13 @@ function clearForm() {
 function getImgValue() {
   const gambarInput = document.getElementById("gambar");
 
-  // Check if a file has been selected
   if (gambarInput.files.length > 0) {
     let file = gambarInput.files[0];
 
-    // Check if the selected file is an image (with the extension ".jpg")
     if (file.name.toLowerCase().endsWith(".jpg")) {
       const imgValue = file.name;
       console.log(imgValue);
-      return imgValue; // Return the image file name
+      return imgValue; 
     } else {
       console.log("File yang diunggah bukan gambar berformat JPG!");
     }
@@ -72,7 +68,7 @@ function getImgValue() {
     console.log("Pilih sebuah file terlebih dahulu !");
   }
 
-  return null; // Return null if no valid image is selected
+  return null; 
 }
 
 function generateRandomStringWithNumbers(length) {
@@ -91,9 +87,8 @@ function generateRandomStringWithNumbers(length) {
   return randomString;
 }
 
-// Contoh penggunaan fungsi untuk menghasilkan string acak dengan panjang 8 (huruf dan angka).
 let randomString = generateRandomStringWithNumbers(8);
-//submit clear
+
 function submitClear() {
   const namaInput = document.getElementById("namaInput").value;
   const dateInput = document.getElementById("dateInput").value;
@@ -116,8 +111,8 @@ function submitClear() {
   emailDisplay.textContent = emailInput;
   institutDisplay.textContent = institutInput;
   resultNama.textContent = namaInput;
-  getImgValue(); // Get and log the image name
-  gambarDisplay.src = getImgValue() + ".jpg"; // Update the path to the image
+  getImgValue();
+  gambarDisplay.src = getImgValue() + ".jpg"; 
 
   // kode random
   kodeDisplay.textContent = randomString;
